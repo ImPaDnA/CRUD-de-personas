@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#E0F7FA"
+    tools:context=".AgregarPersonaActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NUEVA PERSONA"
+        android:textColor="#0097A7"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de la persona"
+        android:inputType="textPersonName"
+        android:backgroundTint="#00BCD4"
+        android:layout_marginBottom="10dp"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/etEdad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Edad de la persona (años)"
+        android:inputType="number"
+        android:maxLength="3"
+        android:backgroundTint="#00BCD4"
+        android:layout_marginBottom="20dp"
+        android:padding="12dp"/>
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar Persona"
+        android:backgroundTint="#00BCD4"
+        android:textColor="@android:color/white"
+        android:padding="12dp"/>
+
+</LinearLayout>
