@@ -17,15 +17,15 @@
         android:orientation="horizontal"
         android:padding="12dp"
         android:gravity="center_vertical"
-        android:background="#FFFFFF">
+        android:background="@color/dark_blue">
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@android:drawable/ic_menu_myplaces"
-            android:tint="#8BC34A"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/user_icon_comic"
             android:layout_marginEnd="10dp"
-            android:contentDescription="Ícono de persona"/>
+            android:contentDescription="Ícono de persona"
+            app:tint="@color/yellow" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -37,8 +37,8 @@
                 android:id="@+id/tvNombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="[Nombre de la Persona]"
-                android:textColor="#388E3C"
+                android:text="Nombre de la Persona"
+                android:textColor="@color/yellow"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
 
@@ -46,9 +46,10 @@
                 android:id="@+id/tvEdad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="[Edad]"
-                android:textColor="#757575"
-                android:textSize="14sp"/>
+                android:text="Edad"
+                android:textColor="@color/yellow"
+                android:textSize="14sp"
+                android:textStyle="italic" />
         </LinearLayout>
 
         <TextView
@@ -56,7 +57,7 @@
             android:layout_height="wrap_content"
             android:text=">"
             android:textSize="24sp"
-            android:textColor="#BDBDBD"/>
+            android:textColor="@color/yellow"/>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

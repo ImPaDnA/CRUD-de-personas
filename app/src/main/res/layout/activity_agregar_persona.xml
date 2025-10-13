@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,7 +13,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NUEVA PERSONA"
+        android:text="AGREGAR PERSONA"
         android:textColor="#0097A7"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -22,7 +23,7 @@
         android:id="@+id/etNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre de la persona"
+        android:hint="Nombre de la persona que agregarás"
         android:inputType="textPersonName"
         android:backgroundTint="#00BCD4"
         android:layout_marginBottom="10dp"
@@ -32,7 +33,7 @@
         android:id="@+id/etEdad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Edad de la persona (años)"
+        android:hint="Edad de la persona que agregarás"
         android:inputType="number"
         android:maxLength="3"
         android:backgroundTint="#00BCD4"
@@ -47,5 +48,20 @@
         android:backgroundTint="#00BCD4"
         android:textColor="@android:color/white"
         android:padding="12dp"/>
+    <!-- Agregar un texto de consejo para el usuario (Eliminar a la persona de la lista) -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/consejo_agregar"
+        android:textColor="#0097A7"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/lista_de_usuarios" />
 
 </LinearLayout>

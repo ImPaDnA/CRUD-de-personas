@@ -3,6 +3,10 @@ package com.matias.proyectocrud;
 // Los imports de ContentValues y SQLiteDatabase no son necesarios aqui.
 // Es mejor borrarlos para que el código esté más limpio. Esta clase solo sirve como molde para las personas.
 
+import androidx.annotation.NonNull; //Importar este NonNUll porque me dio una alerta en ToString, persona no puede ser nulo.
+
+import java.util.Locale; //Localizacion agregada.
+
 public class Persona {
     // Los atributos de una persona.
     private String nombre;
@@ -28,7 +32,7 @@ public class Persona {
         return id;
     }
 
-    public void setId(long Id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -48,12 +52,11 @@ public class Persona {
         this.edad = edad;
     }
 
-    // El toString, mas que nada para pruebas, toString es un método que devuelve una cadena de texto.
+    // cambié el return a un string format, esto es más legible, y NonNull para que no sea nulo.
+    @NonNull
     @Override
     public String toString() {
-        return "Persona{" +
-                "nombre=" + nombre + '\'' +
-                ", edad=" + edad +
-                '}';
+        // Uso locale.US para un formato consistente que no dependa del idioma del teléfono.
+        return String.format(Locale.US, "Persona{nombre='%s', edad=%d}", nombre, edad);
     }
 }

@@ -34,7 +34,7 @@ public class AdaptadorPersonas extends RecyclerView.Adapter<AdaptadorPersonas.My
      * Guarda las referencias a los TextViews para no tener que buscarlos a cada rato.
      * Esto hace que la lista funcione mas rapido.
      */
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
         TextView tvNombre, tvEdad;
 
         public MyViewHolder(View view) {
@@ -69,8 +69,9 @@ public class AdaptadorPersonas extends RecyclerView.Adapter<AdaptadorPersonas.My
         Persona persona = listaDePersonas.get(position);
         // Uso el 'holder' (el molde) para ponerle el nombre y la edad.
         holder.tvNombre.setText(persona.getNombre());
-        // Convierto la edad a texto para poder mostrarla.
-        holder.tvEdad.setText(String.valueOf(persona.getEdad()) + " años");
+        // Convierto la edad a texto para poder mostrarla (arreglada con un string añadido)
+        String edadFormateada = holder.itemView.getContext().getString(R.string.formato_edad, persona.getEdad());
+        holder.tvEdad.setText(edadFormateada);
     }
 
     /*

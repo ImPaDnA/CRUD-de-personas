@@ -16,9 +16,10 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     // Declaro las variables que voy a usar en esta pantalla.
     private List<Persona> listaDePersonas; // La lista de datos.
-    private RecyclerView recyclerView; // La vista que muestra la lista.
+    RecyclerView recyclerView; // La vista que muestra la lista.
     private AdaptadorPersonas adaptadorPersonas; // El que conecta la lista con el RecyclerView.
-    private FloatingActionButton fabAgregarPersona; // El boton flotante.
+    // elimino la variable private en ambos casos porque ahora pueden ser mejor como variables locales en vez de privadas
+    FloatingActionButton fabAgregarPersona; // El boton flotante.
     private ControladorPersonas controladorPersonas; // El que maneja la BD.
 
     @Override

@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * Es un formulario simple con dos campos y un botón.
  */
 public class AgregarPersonaActivity extends AppCompatActivity {
-    private Button btnGuardar;
+    public Button btnGuardar;
     private EditText etNombre, etEdad;
     private ControladorPersonas controladorPersonas; // Lo necesito para usar el método de insertar.
 

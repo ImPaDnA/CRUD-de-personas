@@ -5,25 +5,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5"
+    android:background="@color/dark_cyan"
     tools:context=".MainActivity">
+    <!-- Agregar una barra de titulo (así la app no se siente vacía) -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/goldenrod"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/app_name"
+            android:color="@color/aqua" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <!-- Agregar el RecyclerView a esta página -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+    <!-- Diseñar el botón con un Logo para que el usuario entienda como agregar personas -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAgregarPersona"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
-        android:src="@android:drawable/ic_input_add"
-        app:backgroundTint="#00BCD4"
-        app:tint="@android:color/white"
-        android:contentDescription="Agregar Persona"/>
+        android:contentDescription="@string/descripcion_agregar_persona"
+        android:src="@drawable/agregar_persona"
+        app:backgroundTint="@color/lime"
+        app:maxImageSize="40dp"
+        app:tint="@color/dark_green" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
