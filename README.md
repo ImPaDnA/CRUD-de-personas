@@ -1,4 +1,4 @@
-# RAMA MAIN
+# LISTA DE PERSONAS.
 Rama principal del proyecto Android.
 
 Lista de Personas.
