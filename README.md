@@ -1,2 +1,6 @@
 # RAMA MAIN
-Aquí se publican los cambios significativos del proyecto.
+Rama principal del proyecto Android.
+
+Lista de Personas.
+
+Crea, Lee, Actualiza y Elimina a una persona con su nombre y edad.
